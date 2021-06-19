@@ -13,7 +13,9 @@ def home(request):
 	return render(request, 'home.html', context)
 
 
-def topic(request, title):
+def topic(request, slug):
+
+	title = slug.replace('_',' ')
 
 	topic = Topic.objects.get(title=title)
 
