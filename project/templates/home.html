@@ -18,7 +18,7 @@
 	  	{% for topic in topics%}
 	    <div class="col-4">
 	    	<a href='{% url "topic" topic.title|slugify%}' class="btn-success">
-	    		{% topic.title %}	
+	    		{{ topic.title }}	
 	    	</a>
 	    </div>
 	    {% endfor %}
