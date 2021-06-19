@@ -10,5 +10,5 @@ class Category(models.Model):
 
 class Window(models.Model):
 	name = models.CharField(max_length=255)
-	main_category = models.OneToOneField(Category, default=None, on_delete=models.CASCADE(), related_name='main_category')
-	sub_category = models.OneToOneField(Category, default=None, on_delete=models.CASCADE(), related_name='sub_category')
+	main_category = models.OneToOneField(Category, default=None, on_delete=models.CASCADE, related_name='main_category')
+	sub_category = models.OneToOneField(Category, default=None, on_delete=models.CASCADE, related_name='sub_category')
