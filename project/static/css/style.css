@@ -1,7 +1,15 @@
-col{
+.container{
+	background-color: #94ced1;
+}
+.col{
 	padding: 1rem;
-	background-color:black ;
-	border: 2px solid #fff;
-	color: #fff;
+	background-color: #07ebf7;
+	border: 2px solid #033d40;
+	color: #033d40;
 	text-align: center;
+}
+.svg{
+	width: 100px;
+	height: 100px;
+
 }
