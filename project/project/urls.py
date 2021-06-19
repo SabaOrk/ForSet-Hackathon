@@ -22,6 +22,7 @@ urlpatterns = [
     path('', home_views.home, name='home'),
     path('topic/<slug:slug>', home_views.topic, name='topic'),
     path('about/', home_views.about, name='about'),
-    path('topic/<slug:slug>/relate', home_views.relate_to_topic, name='relate')
+    path('topic/<slug:title>/relate/', home_views.relate_to_topic, name='relate'),
+    path('topic/<slug:title>/check_relate/', home_views.check_related, name='check_relate')
 
 ]

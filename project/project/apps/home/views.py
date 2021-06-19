@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Topic
+from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse
+
 
 # Create your views here.
 def home(request):
@@ -29,9 +31,28 @@ def relate_to_topic(request, title):
 
 	topic = Topic.objects.get(title=title)
 
-	topic.relation_count += 1
+	if request.session.get('related') == False:
+		topic.relation_count += 1
+		topic.save()
 
-	topic.save()
+		request.session['related'] = True
+
+		return JsonResponse({'result': True, 'count':topic.relation_count}, status=200)
+	else:
+		topic.relation_count -= 1
+		topic.save()
+
+		request.session['related'] = False
+
+		return JsonResponse({'result': False, 'count':topic.relation_count}, status=200)
+
+
+def check_related(request, title):
+
+	topic = Topic.objects.get(title=title)
+
+	return JsonResponse({'result': request.session['related']}, status=200)
+
 
 def about(request):
 
