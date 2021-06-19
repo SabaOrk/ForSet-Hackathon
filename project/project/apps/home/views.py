@@ -4,10 +4,10 @@ from .models import Topic
 # Create your views here.
 def home(request):
 
-	windows = Window.objects.all()
+	topics = Topic.objects.all()
 
 	context = {
-		'windows':windows
+		'topics':topics
 	}
 
 	return render(request, 'home.html', context)
