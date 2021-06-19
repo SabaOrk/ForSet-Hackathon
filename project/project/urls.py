@@ -20,6 +20,7 @@ from project.apps.home import views as home_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_views.home, name='home'),
+    path('topic/<slug:title>', home_views.topic, name='topic'),
     path('about/', home_views.about, name='about')
 
 ]
