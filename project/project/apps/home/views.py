@@ -25,6 +25,14 @@ def topic(request, slug):
 
 	return render(request, 'topic.html', context)
 
+def relate_to_topic(request, title):
+
+	topic = Topic.objects.get(title=title)
+
+	topic.relation_count += 1
+
+	topic.save()
+
 def about(request):
 
 	context = {
