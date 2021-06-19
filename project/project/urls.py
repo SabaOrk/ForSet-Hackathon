@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_views.home, name='home'),
     path('topic/<slug:slug>', home_views.topic, name='topic'),
-    path('about/', home_views.about, name='about')
+    path('about/', home_views.about, name='about'),
+    path('topic/<slug:slug>/relate', home_views.relate_to_topic, name='relate')
 
 ]
