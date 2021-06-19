@@ -6,7 +6,9 @@ from django.db import models
 class Category(models.Model):
 	name = models.CharField(max_length=100)
 	description = models.CharField(max_length=500)
-	mkljop = 
+	
 
 class Window(models.Model):
 	name = models.CharField(max_length=255)
+	main_category = models.OneToOneField(Category, default=None, related_name=main_category)
+	sub_category = models.OneToOneField(Category, default=None, related_name=sub_category)
