@@ -21,7 +21,7 @@ from project.apps.subcategory import views as subcategory_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_views.home, name='home'),
-    path('<str:category>/', subcategory_views.sub_categories, name='sub_category'),
+    path('<int:pk>/', home_views.sub_categories, name='sub_category'),
     path('<str:category>/<str:subcategory>/<str:topic>/', home_views.topic, name='topic'),
     path('<str:category>/<str:subcategory>/<str:topic>/relate/', home_views.relate_to_topic, name='relate'),
     path('<str:category>/<str:subcategory>/<str:topic>/check_relate/', home_views.check_related, name='check_relate'),
