@@ -16,13 +16,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from project.apps.home import views as home_views
+from project.apps.subcategory import views as subcategory_views
 
 urlpatterns = [
+    #admin
     path('admin/', admin.site.urls),
+
+    #main
     path('', home_views.home, name='home'),
+    path('<slug:title>/subcategories/', subcategory_views.sub_categories, name='sub_categories'),
     path('topic/<slug:slug>', home_views.topic, name='topic'),
+    path('<slug:category>/<slug:subcategory>/<slug:title>/relate/', home_views.relate_to_topic, name='relate'),
+    path('<slug:category>/<slug:subcategory>/<slug:title>/check_relate/', home_views.check_related, name='check_relate')
+
+    #about
     path('about/', home_views.about, name='about'),
-    path('topic/<slug:title>/relate/', home_views.relate_to_topic, name='relate'),
-    path('topic/<slug:title>/check_relate/', home_views.check_related, name='check_relate')
+
 
 ]
