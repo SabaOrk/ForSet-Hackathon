@@ -29,7 +29,7 @@ section{
   align-items: center;
   flex-direction: row;
   cursor: none;
-  clip-path: circle(155px at var(--x) var(--y));
+  clip-path: circle(175px at var(--x) var(--y));
 }
 section .pos1 {
   position: absolute;
@@ -75,7 +75,7 @@ section .pos5 {
   pointer-events: none;
   transition: 0.0000000001s;
   background: radial-gradient(
-  circle 175px at var(--x) var(--y),
+  circle 190px at var(--x) var(--y),
   rgba(0,0,0,0) 0%,
   rgba(0,0,0,.5) 80%,
   rgba(0,0,0,.95) 100%
@@ -84,7 +84,7 @@ section .pos5 {
 
 section a:hover ~ .circle {
   background: radial-gradient(
-  circle 175px at var(--x) var(--y),
+  circle 190px at var(--x) var(--y),
   rgba(0,0,0,0) 0%,
   rgba(0,0,0,.5) 80%,
   rgba(0,0,0,.95) 100%
@@ -234,7 +234,7 @@ section a:hover ~ .circle {
   object-fit: cover;
 }
 
-.position .category .category-content{
+/* .position .category .category-content{
   position: absolute;
   top: 0;
   left: 0;
@@ -272,4 +272,4 @@ section a:hover ~ .circle {
 .position .category:hover .category-content p{
   transform: translateY(60px);
   transition-delay: 0.6s;
-}
+} */
