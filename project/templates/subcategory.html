@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/styles3.css'%}">
-    <title></title>
+    <title>Responsivness overload</title>
   </head>
   <body>
         <div class="background-image">
@@ -20,12 +20,15 @@
             {% for topic in topics %}
             <div class="col-4" style="max-width:300px; margin:30px">
               <a href="{% url 'topic' topic.pk %}">
-              <div class="category ph1" style="background-image :url({% static 'css/img/ჩადრი.svg' %});">
+              <div class="category" style="background-image :url('img/ჩადრი.svg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-clip:padding-box;
+                background-size: 165px 240px;">
                 <div class="window">
                 </div>
               </div>
-              </a>        
-                <h3 style="color:#322d63; z-index:1; position: absolute; text-align: center; margin: auto;righ">{{topic.title}}</h3>
+              </a>
             </div>
             {% endfor %}
           </div>

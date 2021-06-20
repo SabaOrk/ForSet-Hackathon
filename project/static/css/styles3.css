@@ -23,7 +23,27 @@ body{
   border-radius: 15px;
   cursor: pointer;
 }
-
+.ph1 {
+  background-image :url("img/ჩადრი.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-clip:padding-box;
+  background-size: 165px 240px;
+}
+.ph2 {
+  background-image :url("img/ეთნიკ.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-clip:padding-box;
+  background-size: 165px 240px;
+}
+.ph3 {
+  background-image :url("img/ლგბტ.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-clip:padding-box;
+  background-size: 165px 240px;
+}
 .category .category-box{
   position: absolute;
   top: 0;
