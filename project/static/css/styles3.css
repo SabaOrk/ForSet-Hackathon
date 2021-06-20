@@ -51,6 +51,16 @@ body{
   width: 100%;
   height: 100%;
 }
+.center-text{
+  text-align: center!important;
+  align-items: center!important;
+}
+.center-text h1{
+  color: white !important;
+}
+.modal-bg {
+  background-color: black !important;
+}
 /* .category .category-box:before{
   content: '';
   position: absolute;
