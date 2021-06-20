@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Topic, Experience
+from .models import Topic, Experience, SubCategory, Category
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse
 
 
@@ -42,6 +42,19 @@ def add_experience(request, topic):
 
 		print(ex)
 		return JsonResponse({'result': 'Failed'}, status=200)
+
+def sub_categories(request, pk):
+
+	category = Category.objects.get(pk=pk)
+	print(category.name)
+	sub_categories = SubCategory.objects.filter(category=category)
+
+	context = {
+		'category':category,
+		'sub_categories':sub_categories
+	}
+
+	return render(request, 'subcategory.html', context)
 
 
 
