@@ -12,7 +12,7 @@
                         data: {
                             'csrfmiddlewaretoken' : "{{ csrf_token }}",
                         }, // get the form data
-                        url: "{% url 'check_relate' topic.title %}",
+                        url: "{% url 'check_relate' topic.pk %}",
                         type: 'POST',
                       
                         success: function(response) {
@@ -44,7 +44,7 @@
                         data: {
                             'csrfmiddlewaretoken' : "{{ csrf_token }}",
                         }, // get the form data
-                        url: "{% url 'relate' topic.title %}",
+                        url: "{% url 'relate' topic.pk %}",
                         type: 'POST',
                       
                         success: function(response) {

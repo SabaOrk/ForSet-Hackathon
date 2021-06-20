@@ -16,10 +16,11 @@ def home(request):
 
 def topic(request, category, subcategory, topic):
 
-	topic = Topic.objects.get(title=topic)
+	topic = Topic.objects.get(pk=topic)
 
 	context = {
-		'topic':topic
+		'topic':topic,
+		'bg':topic.main_category.bg
 	}
 
 	return render(request, 'topic.html', context)
@@ -28,7 +29,7 @@ def topic(request, category, subcategory, topic):
 def add_experience(request, topic):
 
 	try:
-		topic = Topic.objects.get(title=topic)
+		topic = Topic.objects.get(pk=topic)
 
 		if request.method == 'POST':
 			email = request.POST.get('email')
@@ -58,9 +59,9 @@ def sub_categories(request, pk):
 
 
 
-def relate_to_topic(request, category, subcategory, topic):
+def relate_to_topic(request, topic):
 
-	topic = Topic.objects.get(title=topic)
+	topic = Topic.objects.get(pk=topic)
 
 	if request.session.get('related') == False:
 		topic.relation_count += 1
@@ -78,11 +79,16 @@ def relate_to_topic(request, category, subcategory, topic):
 		return JsonResponse({'result': False, 'count':topic.relation_count}, status=200)
 
 
-def check_related(request, category, subcategory, topic):
+def check_related(request, topic):
+	try:
+		topic = Topic.objects.get(pk=topic)
 
-	topic = Topic.objects.get(title=topic)
+		return JsonResponse({'result': request.session['related']}, status=200)
 
-	return JsonResponse({'result': request.session['related']}, status=200)
+	except Exception as ex:
+		print(ex)
+
+		return JsonResponse({'result': 'Empty'}, status=200)
 
 
 def about(request):

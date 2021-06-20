@@ -1,104 +1,42 @@
-<!DOCTYPE HTML>
+<!doctype html>
 {% load static %}
-<html>
-	<head>
-		<title>IDreamers</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="{% static 'css/main2.css'%}" />
-	</head>
-	<body class="is-preload">
-
-		<!-- Header -->
-
-			<header id="header">
-				<div id="header" href=index.html alt="">
-				<img class="logo" src="{% static 'img/Group 5705.png' %}" alt="">
-				<div class="topnav" id="myTopnav">
-					<a href="index.html" class="active">Home</a>
-					<a href="blog.html">Blog</a>
-					<a href="Register.html">Register</a>
-					<a href="Login.html">Log in</a>
-
-				</div>
-				</div>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles3.css'%}">
+    <title>Topic</title>
+  </head>
+  <body>
+        <div class="background-image">
+          <img src="{% static bg %}" alt="">
 
 
-			</header>
+        </div>
 
-<!-- blog -->
+        <div style="z-index: 1; background-color:rgba(255, 255, 255, 0.6); padding: 30px; border-radius: 15px; text-align: center; width: 900px; font-size: 23px; font-weight: bold;">
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>TITLE HEADING1</h2>
-      <h5>Title description, Dec 24, 2020</h5>
-      <div class="imgblog" > <img src="images\steam-salmon-broccoli-paleo-keto-lshf-dash-diet-mediterranean-food-clean-eating-balanced_73872-1991.png" alt=""> </div>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-			<hr>
-			<div id="respond">
+        	<h1>Lorem Ipsum</h1>
+        	
+        	<p>
+        		 Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:
 
-			<a id='relation_count' type="button">{{topic.relation_count}}Can Relate</a>
+			“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”
+			The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.
 
-	  <h4>leave your experience</h4>
+			The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.
 
-	  <form method="post" id="commentform">
+        	</p>
 
+        <a id='relation_count' type="button">{{topic.relation_count}} Can Relate</a>
 
-	    <label for="comment" class="required">Your comment</label>
-	    <textarea name="comment" id="comment" rows="10" tabindex="1"  required="required"></textarea>
+        </div>	
 
-	    <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
-	    <input name="submit" type="submit" value="Submit comment" />
-
-	  </form>
-
-	</div>
-    </div>
-  </div>
-
-  <div class="rightcolumn">
-
-    <div class="card">
-      <h3>Popular Posts</h3>
-      <div class="imgresponsive"> Popular post1 <img src="images\2020-Yamaha-XP500ADX-EU-Tech_Kamo-Static-006-03.png" alt=""> </div><br><hr>
-      <div class="imgresponsive">Popular post2 <img src="images\beautiful-girl-swimsuit-pool_283411-21.png" alt=""> </div><br><hr>
-			<div class="imgresponsive">Popular post3 <img src="images\dirty-hands-homeless-poor-man-with-piece-bread-modern-capitalism-society_140289-14.png" alt=""> </div><br><hr>
-			<div class="imgresponsive">Popular post4 <img src="images\various-colours-sizes-paint.png" alt=""> </div><br><hr>
-			<div class="imgresponsive">Popular post5 <img src="images\female-instructor-with-yoga-class-in-the-gym.png" alt=""> </div><br><hr>
-			<div class="imgresponsive">Popular post6 <img src="images\confident-skilled-woman-engineer-making-sketches-using-pen-engineering-equipment.png" alt=""> </div><br><hr>
-
-    </div>
-
-  </div>
-</div>
-
-
-		<!-- Footer -->
-					<footer id="footer">
-<div class="inner">
-							<div class="content">
-
-
-
-								<section>
-									<h4>Contact us</h4>
-									<ul class="plain">
-										<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
-										<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
-										<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
-
-									</ul>
-								</section>
-							</div>
-							<div class="copyright">
-								&copy; <a href="https://IDreamers.com">IDreamers</a>.
-							</div>
-		</div>
-					</footer>
-
+        
 				<!-- Scripts -->
 					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 					<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -120,17 +58,20 @@
                         data: {
                             'csrfmiddlewaretoken' : "{{ csrf_token }}",
                         }, // get the form data
-                        url: "{% url 'check_relate' topic.title %}",
+                        url: "{% url 'check_relate' topic.pk %}",
                         type: 'POST',
                       
                         success: function(response) {
                             if (response.result === true) {
                                 console.log('Related')
-                                document.getElementById('relation_count').innerText = "{{topic.relation_count}} Can't Relate"
+                                document.getElementById('relation_count').innerText = "{{topic.relation_count}} I Can't Relate"
 
                             }else if (response.result == false) {
                                 console.log('UnRelated')
-                                document.getElementById('relation_count').innerText = "{{topic.relation_count}} Can Relate"
+                                document.getElementById('relation_count').innerText = "{{topic.relation_count}} I Can Relate"
+                            }
+                            else if (response.result == 'Empty'){
+                            	console.log('Empty')
                             }
 
                         },
@@ -152,7 +93,7 @@
                         data: {
                             'csrfmiddlewaretoken' : "{{ csrf_token }}",
                         }, // get the form data
-                        url: "{% url 'relate' topic.title %}",
+                        url: "{% url 'relate' topic.pk %}",
                         type: 'POST',
                       
                         success: function(response) {
@@ -160,11 +101,11 @@
                                 console.log('Related')
                                 console.log(response.count)
 
-                                document.getElementById('relation_count').innerText = response.count + " Can't Relate"
+                                document.getElementById('relation_count').innerText = response.count + " I Can't Relate"
 
                             }else if (response.result == false) {
                                 console.log('UnRelated')
-                                document.getElementById('relation_count').innerText = response.count + " Can Relate"
+                                document.getElementById('relation_count').innerText = response.count + "I Can Relate"
                             }
 
 

@@ -22,9 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_views.home, name='home'),
     path('<int:pk>/', home_views.sub_categories, name='sub_category'),
-    path('<str:category>/<str:subcategory>/<str:topic>/', home_views.topic, name='topic'),
-    path('<str:category>/<str:subcategory>/<str:topic>/relate/', home_views.relate_to_topic, name='relate'),
-    path('<str:category>/<str:subcategory>/<str:topic>/check_relate/', home_views.check_related, name='check_relate'),
+    path('<int:category>/<int:subcategory>/<int:topic>/', home_views.topic, name='topic'),
+    path('<int:topic>/relate/', home_views.relate_to_topic, name='relate'),
+    path('<int:topic>/check_relate/', home_views.check_related, name='check_relate'),
 
     #ajax
     path('experience/<str:topic>', home_views.add_experience, name='add_experience'),
@@ -32,7 +32,5 @@ urlpatterns = [
 
     #about
     path('about/', home_views.about, name='about'),
-    path('topic/<slug:title>/relate/', home_views.relate_to_topic, name='relate'),
-    path('topic/<slug:title>/check_relate/', home_views.check_related, name='check_relate')
 
 ]
