@@ -164,7 +164,7 @@ body{
   border-color: #a39ce8 !important;
 }
 .modal-footer{
-  border-color: #a39ce8 !important;
+  border:none !important;
 }
 
 .modal-body label{
