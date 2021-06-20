@@ -60,7 +60,7 @@ section .pos4 {
 }
 section .pos5 {
   position: absolute;
-  left: 31%;
+  left: 25%;
   top: 23%;
   cursor: none;
   z-index: 1;
