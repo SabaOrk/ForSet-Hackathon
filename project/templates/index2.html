@@ -12,6 +12,16 @@
     <title>Responsivness overload</title>
   </head>
   <body>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-bg">
+          <div class="modal-body center-text">
+            <h1>დაინახე</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="popup" style="display: none;" data-bs-toggle='modal' data-bs-target='#exampleModal'></button>
         <section class="no-cursor">
           <a class="position pos1" href="/2/">
           <div class="category ph1">
@@ -68,6 +78,12 @@
         pos.style.setProperty('--x', e.clientX + 'px');
         pos.style.setProperty('--y', e.clientY + 'px');
       })
+      function btn_click(){
+        console.log('trakshipero')
+        var btn = document.getElementById('popup')
+        btn.click()
+      }
+      btn_click()
     </script>
   </body>
 </html>

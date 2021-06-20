@@ -273,3 +273,14 @@ section a:hover ~ .circle {
   transform: translateY(60px);
   transition-delay: 0.6s;
 } */
+
+.center-text{
+  text-align: center!important;
+  align-items: center!important;
+}
+.center-text h1{
+  color: white !important;
+}
+.modal-bg {
+  background-color: black !important;
+}
