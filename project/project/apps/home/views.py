@@ -49,10 +49,13 @@ def sub_categories(request, pk):
 	category = Category.objects.get(pk=pk)
 	print(category.name)
 	sub_categories = SubCategory.objects.filter(category=category)
+	topics = Topic.objects.filter(main_category=category)
+	print(topics)
 
 	context = {
 		'category':category,
-		'sub_categories':sub_categories
+		'sub_categories':sub_categories,
+		'topics': topics
 	}
 
 	return render(request, 'subcategory.html', context)
