@@ -112,35 +112,35 @@ section a:hover ~ .circle {
 
 }
 .position .ph1{
-  background: url("img/psychological.svg");
+  background: url("img/psychological_round.svg");
   background-clip: padding-box;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .position .ph2{
-  background: url("img/emotional.svg");
+  background: url("img/emotional_round.svg");
   background-clip: padding-box;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .position .ph3{
-  background: url("img/economical.svg");
+  background: url("img/economical_round.svg");
   background-clip: padding-box;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .position .ph4{
-  background: url("img/sexual.svg");
+  background: url("img/sexual_round.svg");
   background-clip: padding-box;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .position .ph5{
-  background: url("img/physics.svg");
+  background: url("img/physics_round.svg");
   background-clip: padding-box;
   background-position: center center;
   background-repeat: no-repeat;
@@ -151,7 +151,7 @@ section a:hover ~ .circle {
   transform: scale(1.10);
   box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
   transition: 1s;
-  background: url("img/psychological.svg");
+  background: url("img/psychological_round.svg");
   background-clip: padding-box;
   background-position: center center;
   background-repeat: no-repeat;
@@ -162,7 +162,7 @@ section a:hover ~ .circle {
   transform: scale(1.10);
   box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
   transition: 1s;
-  background: url("img/emotional.svg");
+  background: url("img/emotional_round.svg");
   background-clip: padding-box;
   background-position: center center;
   background-repeat: no-repeat;
@@ -173,7 +173,7 @@ section a:hover ~ .circle {
   transform: scale(1.10);
   box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
   transition: 1s;
-  background: url("img/economical.svg");
+  background: url("img/economical_round.svg");
   background-clip: padding-box;
   background-position: center center;
   background-repeat: no-repeat;
@@ -184,7 +184,7 @@ section a:hover ~ .circle {
   transform: scale(1.10);
   box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
   transition: 1s;
-  background: url("img/sexual.svg");
+  background: url("img/sexual_round.svg");
   background-clip: padding-box;
   background-position: center center;
   background-repeat: no-repeat;
@@ -195,7 +195,7 @@ section a:hover ~ .circle {
   transform: scale(1.10);
   box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
   transition: 1s;
-  background: url("img/physics.svg");
+  background: url("img/physics_round.svg");
   background-clip: padding-box;
   background-position: center center;
   background-repeat: no-repeat;
