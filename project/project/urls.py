@@ -22,7 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_views.home, name='home'),
     path('<int:pk>/', home_views.sub_categories, name='sub_category'),
-    path('<int:category>/<int:subcategory>/<int:topic>/', home_views.topic, name='topic'),
+    path('topic/<int:topic>/', home_views.topic, name='topic'),
     path('<int:topic>/relate/', home_views.relate_to_topic, name='relate'),
     path('<int:topic>/check_relate/', home_views.check_related, name='check_relate'),
 
