@@ -75,8 +75,8 @@ section .pos5 {
   transition: 0.0000000001s;
   background: radial-gradient(
   circle 190px at var(--x) var(--y),
-  rgba(0,0,0,0) 0%,
-  rgba(0,0,0,.5) 80%,
+  rgba(0,0,0,0) 10%,
+  rgba(0,0,0,.5) 60%,
   rgba(0,0,0,.95) 100%
 );
 }
@@ -84,8 +84,8 @@ section .pos5 {
 section a:hover ~ .circle {
   background: radial-gradient(
   circle 190px at var(--x) var(--y),
-  rgba(0,0,0,0) 0%,
-  rgba(0,0,0,.5) 80%,
+  rgba(0,0,0,0) 10%,
+  rgba(0,0,0,.5) 60%,
   rgba(0,0,0,.95) 100%
 );
   transition: 0.0000000001s;
