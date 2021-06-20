@@ -24,10 +24,14 @@ urlpatterns = [
 
     #main
     path('', home_views.home, name='home'),
-    path('<slug:title>/subcategories/', subcategory_views.sub_categories, name='sub_categories'),
-    path('topic/<slug:slug>', home_views.topic, name='topic'),
-    path('<slug:category>/<slug:subcategory>/<slug:title>/relate/', home_views.relate_to_topic, name='relate'),
-    path('<slug:category>/<slug:subcategory>/<slug:title>/check_relate/', home_views.check_related, name='check_relate'),
+    path('<str:category>/', subcategory_views.sub_categories, name='sub_category'),
+    path('<str:category>/<str:subcategory>/<str:topic>/', home_views.topic, name='topic'),
+    path('<str:category>/<str:subcategory>/<str:topic>/relate/', home_views.relate_to_topic, name='relate'),
+    path('<str:category>/<str:subcategory>/<str:topic>/check_relate/', home_views.check_related, name='check_relate'),
+
+    #ajax
+    path('experience/<str:topic>', home_views.add_experience, name='add_experience'),
+
 
     #about
     path('about/', home_views.about, name='about'),

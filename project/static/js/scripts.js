@@ -70,4 +70,33 @@
                 return false;
             });
         });
+        $('#add_experience').on('click', function () {
+                // create an AJAX call
+                $.ajax({
+                        data: {
+                            'csrfmiddlewaretoken' : "{{ csrf_token }}",
+                            'email':document.getElementById('email').value
+                            'text':document.getElementById('text').value
+                        }, // get the form data
+                        url: "{% url 'add_experience' topic.title %}",
+                        type: 'POST',
+                      
+                        success: function(response) {
+                            if (response.result === true) {
+
+
+                            }else if (response.result == 'Failed') {
+                                console.log(response.result)
+                            }
+
+                        },
+                        // on error
+                        error: function(response) {
+                            // alert the error if any error occured
+                            console.log(response.responseJSON)
+                        }
+                    });
+                return false;
+            });
+
 					</script>

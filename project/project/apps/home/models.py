@@ -30,6 +30,7 @@ class Topic(models.Model):
 
 class Experience(models.Model):
 	email = models.EmailField(max_length=255, blank=False, null=False)
+	topic = models.ForeignKey(Topic, default=None, on_delete=models.CASCADE, related_name='topic')
 	text = models.TextField()
 	date_created = models.DateTimeField(auto_now=True)
 	approved = models.BooleanField(default=False)

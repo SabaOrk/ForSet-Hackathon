@@ -1,25 +1,22 @@
 from django.shortcuts import render
-from .models import Topic
+from .models import Topic, Experience
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse
 
 
 # Create your views here.
 def home(request):
 
-	topics = Topic.objects.all()
 
 	context = {
-		'topics':topics
+		
 	}
 
 	return render(request, 'index2.html', context)
 
 
-def topic(request, slug):
+def topic(request, category, subcategory, topic):
 
-	title = slug.replace('_',' ')
-
-	topic = Topic.objects.get(title=title)
+	topic = Topic.objects.get(title=topic)
 
 	context = {
 		'topic':topic
@@ -27,9 +24,30 @@ def topic(request, slug):
 
 	return render(request, 'topic.html', context)
 
-def relate_to_topic(request, title):
 
-	topic = Topic.objects.get(title=title)
+def add_experience(request, topic):
+
+	try:
+		topic = Topic.objects.get(title=topic)
+
+		if request.method == 'POST':
+			email = request.POST.get('email')
+			text = request.POST.get('text')
+
+			experience = Experience.objects.create(email=email, text=text)
+
+			return JsonResponse({'result': True}, status=200)
+
+	except Exception as ex:
+
+		print(ex)
+		return JsonResponse({'result': 'Failed'}, status=200)
+
+
+
+def relate_to_topic(request, category, subcategory, topic):
+
+	topic = Topic.objects.get(title=topic)
 
 	if request.session.get('related') == False:
 		topic.relation_count += 1
@@ -47,9 +65,9 @@ def relate_to_topic(request, title):
 		return JsonResponse({'result': False, 'count':topic.relation_count}, status=200)
 
 
-def check_related(request, title):
+def check_related(request, category, subcategory, topic):
 
-	topic = Topic.objects.get(title=title)
+	topic = Topic.objects.get(title=topic)
 
 	return JsonResponse({'result': request.session['related']}, status=200)
 

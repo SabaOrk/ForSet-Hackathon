@@ -11,4 +11,4 @@ def sub_categories(request, category):
 		'sub_categories':sub_categories
 	}
 
-	return render(request, '.html', context)
+	return render(request, 'home.html', context)
