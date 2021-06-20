@@ -10,17 +10,31 @@ class Category(models.Model):
 	def __str__(self):
 		return self.name
 
+class SubCategory(models.Model):
+	category = models.ForeignKey(Category, on_delete=models.SET_NULL, blank=True, null=True)
+	name = models.CharField(max_length=100)
+	description = models.CharField(max_length=500)
+
+	def __str__(self):
+		return self.name
+
 class Topic(models.Model):
 	title = models.CharField(max_length=255)
 	content = models.TextField()
-	main_category = models.OneToOneField(Category, default=None, on_delete=models.CASCADE, related_name='main_category')
-	sub_category = models.OneToOneField(Category, default=None, on_delete=models.CASCADE, related_name='sub_category')
+	main_category = models.ForeignKey(Category, default=None, on_delete=models.CASCADE, related_name='main_category')
+	sub_category = models.ForeignKey(SubCategory, default=None, on_delete=models.CASCADE, related_name='sub_category')
 	relation_count = models.IntegerField(default=0)
 
 	def __str__(self):
 		return self.title
+
 class Experience(models.Model):
 	email = models.EmailField(max_length=255, blank=False, null=False)
 	text = models.TextField()
 	date_created = models.DateTimeField(auto_now=True)
 	approved = models.BooleanField(default=False)
+
+	def __str__(self):
+		return self.email
+
+
