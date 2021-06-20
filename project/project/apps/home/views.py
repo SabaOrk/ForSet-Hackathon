@@ -12,7 +12,7 @@ def home(request):
 		'topics':topics
 	}
 
-	return render(request, 'home.html', context)
+	return render(request, 'index2.html', context)
 
 
 def topic(request, slug):

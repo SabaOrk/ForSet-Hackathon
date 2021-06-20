@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+  cursor: hide;
+}
+
+section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("img/eco.svg");
+  background-clip: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: none;
+  clip-path: circle(155px at var(--x) var(--y));
+}
+section .pos1 {
+  position: absolute;
+  left: 41%;
+  top: 7%;
+  cursor: none;
+  z-index: 1;
+}
+section .pos2 {
+  position: absolute;
+  left: 67%;
+  top: 27%;
+  cursor: none;
+  z-index: 1;
+}
+section .pos3 {
+  position: absolute;
+  left: 50%;
+  top: 63%;
+  cursor: none;
+  z-index: 1;
+}
+section .pos4 {
+  position: absolute;
+  left: 20%;
+  top: 55%;
+  cursor: none;
+  z-index: 1;
+}
+section .pos5 {
+  position: absolute;
+  left: 11%;
+  top: 21%;
+  cursor: none;
+  z-index: 1;
+}
+
+.circle{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  transition: 0.0000000001s;
+  background: radial-gradient(
+  circle 175px at var(--x) var(--y),
+  rgba(0,0,0,0) 0%,
+  rgba(0,0,0,.5) 80%,
+  rgba(0,0,0,.95) 100%
+);
+}
+
+section a:hover ~ .circle {
+  background: radial-gradient(
+  circle 175px at var(--x) var(--y),
+  rgba(0,0,0,0) 0%,
+  rgba(0,0,0,.5) 80%,
+  rgba(0,0,0,.95) 100%
+);
+  transition: 0.0000000001s;
+  transition-delay: 0.0000000001s;
+}
+
+
+.position{
+  color: #111;
+  z-index: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.position .category{
+  position: relative;
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
+  transition: 0.5s;
+  border-radius: 150px;
+
+}
+.position .ph1{
+  background: url("img/psy.svg");
+  background-clip: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.position .ph2{
+  background: url("img/emo.svg");
+  background-clip: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.position .ph3{
+  background: url("img/eco.svg");
+  background-clip: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.position .ph4{
+  background: url("img/sex.svg");
+  background-clip: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.position .ph5{
+  background: url("img/phy.svg");
+  background-clip: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.position .ph1:hover{
+  z-index:1;
+  transform: scale(1.10);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+  background: url("img/psy.svg");
+  background-clip: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.position .ph2:hover{
+  z-index:1;
+  transform: scale(1.10);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+  background: url("img/emo.svg");
+  background-clip: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.position .ph3:hover{
+  z-index:1;
+  transform: scale(1.10);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+  background: url("img/eco.svg");
+  background-clip: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.position .ph4:hover{
+  z-index:1;
+  transform: scale(1.10);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+  background: url("img/sex.svg");
+  background-clip: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.position .ph5:hover{
+  z-index:1;
+  transform: scale(1.10);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+  background: url("img/phy.svg");
+  background-clip: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.position .category .category-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* .position .category .category-box:before{
+  content: '';
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(180deg,#bcd9f1,#76a1c7);
+  mix-blend-mode:multiply;
+  opacity: 0;
+  transition: 0.5s;
+}
+.position .category:hover .category-box:before{
+  opacity: 1;
+} */
+.position .category .category-box img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.position .category .category-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding: 20px;
+}
+
+.position .category .category-content h2{
+  color: #e9eff2;
+  text-align: center;
+  transition: 0.5s;
+  margin-bottom: 15px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+  font-size: 18px;
+  transform: translateY(260px);
+}
+
+.position .category:hover .category-content h2{
+  transform: translateY(60px);
+  transition-delay: 0.5s;
+}
+
+.position .category .category-content p{
+  color: #e9eff2;
+  text-align: center;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+  transform: translateY(260px);
+  transition: 0.5s;
+  font-size: 14px;
+}
+
+.position .category:hover .category-content p{
+  transform: translateY(60px);
+  transition-delay: 0.6s;
+}

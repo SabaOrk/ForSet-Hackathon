@@ -1,0 +1,73 @@
+<!doctype html>
+  {% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles2.css'%}">
+    <title>Responsivness overload</title>
+  </head>
+  <body>
+        <section>
+          <a class="position pos1" href="#">
+          <div class="category ph1">
+            <div class="category-box">
+            </div>
+            <div class="category-content">
+              
+            </div>
+          </div>
+          </a>
+          <a class="position pos2" href="#">
+          <div class="category ph2">
+            <div class="category-box">
+            </div>
+            <div class="category-content">
+              
+            </div>
+          </div>
+          </a>
+          <a class="position pos3" href="#">
+          <div class="category ph3">
+            <div class="category-box">
+            </div>
+            <div class="category-content">
+              
+            </div>
+          </div>
+          </a>
+          <a class="position pos4" href="#">
+          <div class="category ph4">
+            <div class="category-box">
+            </div>
+            <div class="category-content">
+              
+            </div>
+          </div>
+          </a>
+          <a class="position pos5" href="#">
+          <div class="category ph5">
+            <div class="category-box">
+            </div>
+            <div class="category-content">
+              
+            </div>
+          </div>
+          </a>
+          <div class="circle">
+          </div>
+        </section>
+
+    <script type="text/javascript">
+      const pos = document.documentElement;
+      pos.addEventListener('mousemove', e => {
+        pos.style.setProperty('--x', e.clientX + 'px');
+        pos.style.setProperty('--y', e.clientY + 'px');
+      })
+    </script>
+  </body>
+</html>

@@ -40,7 +40,7 @@
 			<hr>
 			<div id="respond">
 
-			<a id='relation_count' type="button">Can Relate</a>
+			<a id='relation_count' type="button">{{topic.relation_count}}Can Relate</a>
 
 	  <h4>leave your experience</h4>
 
@@ -126,11 +126,11 @@
                         success: function(response) {
                             if (response.result === true) {
                                 console.log('Related')
-                                document.getElementById('relation_count').innerText = '{{topic.relation_count}} Can Relate'
+                                document.getElementById('relation_count').innerText = "{{topic.relation_count}} Can't Relate"
 
                             }else if (response.result == false) {
                                 console.log('UnRelated')
-                                document.getElementById('relation_count').innerText = "{{topic.relation_count}} Can't Relate"
+                                document.getElementById('relation_count').innerText = "{{topic.relation_count}} Can Relate"
                             }
 
                         },
@@ -160,11 +160,11 @@
                                 console.log('Related')
                                 console.log(response.count)
 
-                                document.getElementById('relation_count').innerText = response.count + ' Can Relate'
+                                document.getElementById('relation_count').innerText = response.count + " Can't Relate"
 
                             }else if (response.result == false) {
                                 console.log('UnRelated')
-                                document.getElementById('relation_count').innerText = response.count + " Can't Relate"
+                                document.getElementById('relation_count').innerText = response.count + " Can Relate"
                             }
 
 
