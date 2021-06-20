@@ -11,7 +11,7 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #000;
+
 }
 
 section{
@@ -27,8 +27,9 @@ section{
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+.no-cursor{
   cursor: none;
-  clip-path: circle(175px at var(--x) var(--y));
 }
 section .pos1 {
   position: absolute;
@@ -74,7 +75,7 @@ section .pos5 {
   pointer-events: none;
   transition: 0.0000000001s;
   background: radial-gradient(
-  circle 190px at var(--x) var(--y),
+  circle 200px at var(--x) var(--y),
   rgba(0,0,0,0) 10%,
   rgba(0,0,0,.5) 60%,
   rgba(0,0,0,.95) 100%
@@ -83,7 +84,7 @@ section .pos5 {
 
 section a:hover ~ .circle {
   background: radial-gradient(
-  circle 190px at var(--x) var(--y),
+  circle 200px at var(--x) var(--y),
   rgba(0,0,0,0) 10%,
   rgba(0,0,0,.5) 60%,
   rgba(0,0,0,.95) 100%
