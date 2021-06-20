@@ -17,62 +17,20 @@
         </div>
         <div class="container">
           <div class="row justify-content-center">
+            {% for topic in topics %}
             <div class="col-4" style="max-width:300px; margin:30px">
-              <a href="#">
-              <div class="category ph1">
+              <a href="{% url 'topic' topic.pk %}">
+              <div class="category" style="background-image :url('img/ჩადრი.svg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-clip:padding-box;
+                background-size: 165px 240px;">
                 <div class="window">
-
                 </div>
               </div>
               </a>
             </div>
-            <div class="col-4 " style="max-width:300px; margin:30px">
-              <a href="#">
-              <div class="category ph2">
-                <div class="window">
-
-                </div>
-              </div>
-              </a>
-            </div>
-            <div class="col-4" style="max-width:300px; margin:30px">
-              <a href="#">
-              <div class="category ph3">
-                <div class="window">
-
-                </div>
-              </div>
-              </a>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-4" style="max-width:300px; margin:30px">
-              <a href="#">
-              <div class="category">
-                <div class="window">
-
-                </div>
-              </div>
-              </a>
-            </div>
-            <div class="col-4 " style="max-width:300px; margin:30px">
-              <a href="#">
-              <div class="category">
-                <div class="window">
-
-                </div>
-              </div>
-              </a>
-            </div>
-            <div class="col-4" style="max-width:300px; margin:30px">
-              <a href="#">
-              <div class="category">
-                <div class="window">
-
-                </div>
-              </div>
-              </a>
-            </div>
+            {% endfor %}
           </div>
         </div>
   </body>
