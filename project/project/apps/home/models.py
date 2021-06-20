@@ -22,7 +22,7 @@ class SubCategory(models.Model):
 class Topic(models.Model):
 	title = models.CharField(max_length=255)
 	content = models.TextField()
-	
+	svg = models.CharField(max_length=200, blank=True, null=True)
 	main_category = models.ForeignKey(Category, default=None, on_delete=models.CASCADE, related_name='main_category')
 	sub_category = models.ForeignKey(SubCategory, default=None, on_delete=models.CASCADE, related_name='sub_category')
 	relation_count = models.IntegerField(default=0)

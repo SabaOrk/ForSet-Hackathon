@@ -19,13 +19,13 @@
           <div class="row justify-content-center">
             {% for topic in topics %}
             <div class="col-4" style="max-width:300px; margin:30px">
-              <a href="{% url 'topic' topic.pk %}">
-              <div class="category ph1" style="background-image :url({% static 'css/img/ჩადრი.svg' %});">
+              <a style=" text-decoration:none " href="{% url 'topic' topic.pk %}">
+              <div class="category ph1" style="background-image :url({% static topic.svg %});">
                 <div class="window">
                 </div>
               </div>
+              <h3 style="color:#322d63; font-weight: bold; z-index:1;position: relative; text-align: center; margin: auto;">{{topic.title}}</h3>
               </a>        
-                <h3 style="color:#322d63; z-index:1; position: absolute; text-align: center; margin: auto;">{{topic.title}}</h3>
             </div>
             {% endfor %}
           </div>

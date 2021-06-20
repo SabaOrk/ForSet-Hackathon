@@ -17,7 +17,7 @@ body{
 .category{
   position: relative;
   width: 260px;
-  height: 260px;
+  height: 285px;
   overflow: hidden;
   transition: 0.5s;
   border-radius: 15px;
@@ -57,6 +57,11 @@ body{
 }
 .center-text h1{
   color: white !important;
+  align-items: center!important;
+  display: flex!important;
+  justify-content: center!important;
+  min-height: 100vh!important;
+
 }
 .modal-bg {
   background-color: black !important;
@@ -130,7 +135,7 @@ body{
   background-repeat: no-repeat;
   background-position: center center;
   background-clip:padding-box;
-  background-size: 165px 240px;
+  background-size: 165px 220px;
 }
 .background-image{
   position: absolute;
@@ -204,4 +209,8 @@ body{
 
 .modal-body label{
   color: #595398 !important;
+}
+
+.scroll-text::-webkit-scrollbar{
+  display: none;
 }
