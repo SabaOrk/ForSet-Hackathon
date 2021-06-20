@@ -14,7 +14,7 @@ def home(request):
 	return render(request, 'index2.html', context)
 
 
-def topic(request, category, subcategory, topic):
+def topic(request, topic):
 
 	topic = Topic.objects.get(pk=topic)
 
