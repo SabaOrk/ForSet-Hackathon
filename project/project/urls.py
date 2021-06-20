@@ -27,7 +27,7 @@ urlpatterns = [
     path('<slug:title>/subcategories/', subcategory_views.sub_categories, name='sub_categories'),
     path('topic/<slug:slug>', home_views.topic, name='topic'),
     path('<slug:category>/<slug:subcategory>/<slug:title>/relate/', home_views.relate_to_topic, name='relate'),
-    path('<slug:category>/<slug:subcategory>/<slug:title>/check_relate/', home_views.check_related, name='check_relate')
+    path('<slug:category>/<slug:subcategory>/<slug:title>/check_relate/', home_views.check_related, name='check_relate'),
 
     #about
     path('about/', home_views.about, name='about'),
