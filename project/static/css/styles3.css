@@ -146,3 +146,27 @@ body{
   justify-content: center;
   align-items: center;
 }
+.modal-title{
+  color: #595398 !important;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.btn-primary{
+  background-color: #322d63 !important;
+  border: none;
+  outline: none;
+}
+.modal-content{
+  background-color: #c9eff4 !important;
+}
+.modal-header{
+  border-color: #a39ce8 !important;
+}
+.modal-footer{
+  border-color: #a39ce8 !important;
+}
+
+.modal-body label{
+  color: #595398 !important;
+}
