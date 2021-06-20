@@ -109,7 +109,7 @@ section a:hover ~ .circle {
   overflow: hidden;
   transition: 0.5s;
   border-radius: 150px;
-
+  cursor: pointer;
 }
 .position .ph1{
   background: url("img/psychological_round.svg");
