@@ -96,7 +96,12 @@ body{
   transform: translateY(40px);
   transition-delay: 0.6s;
 } */
-
+.ph1 {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-clip:padding-box;
+  background-size: 165px 240px;
+}
 .background-image{
   position: absolute;
   width: 100%;
