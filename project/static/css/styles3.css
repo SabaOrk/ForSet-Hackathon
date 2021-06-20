@@ -126,3 +126,13 @@ body{
   transition: 0.5s;
   background-image :url("img/ღია.svg");
 }
+.add-exp{
+  padding: 10px 15px;
+  background-color: #322d63;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bolder;
+  z-index: 1;
+  text-align: center;
+  margin-top: 40px;
+}

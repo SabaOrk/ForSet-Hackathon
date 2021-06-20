@@ -21,7 +21,7 @@
         <div style="z-index: 1; background-color:rgba(255, 255, 255, 0.6); padding: 30px; border-radius: 15px; text-align: center; width: 900px; font-size: 23px; font-weight: bold;">
 
         	<h1>Lorem Ipsum</h1>
-        	
+
         	<p>
         		 Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:
 
@@ -34,9 +34,11 @@
 
         <a id='relation_count' type="button">{{topic.relation_count}} Can Relate</a>
 
-        </div>	
+        </div>
 
-        
+					<button type="button" name="button" class="add-exp">Add your experience!</button>
+
+
 				<!-- Scripts -->
 					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 					<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -52,7 +54,7 @@
     					.map(cookie => cookie.split('='))
     					.reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
 
-    					
+
     					function check_related(){
     						$.ajax({
                         data: {
@@ -60,7 +62,7 @@
                         }, // get the form data
                         url: "{% url 'check_relate' topic.pk %}",
                         type: 'POST',
-                      
+
                         success: function(response) {
                             if (response.result === true) {
                                 console.log('Related')
@@ -95,7 +97,7 @@
                         }, // get the form data
                         url: "{% url 'relate' topic.pk %}",
                         type: 'POST',
-                      
+
                         success: function(response) {
                             if (response.result === true) {
                                 console.log('Related')
